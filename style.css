@@ -1,0 +1,118 @@
+body {
+  background-color: #fff5f8;
+  color: #3a2a31;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  color: #e8588a;
+}
+
+.pet-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.pet-card {
+  background-color: white;
+  border: 2px solid #f0dbe4;
+  border-radius: 40px;
+  padding: 20px 30px;
+}
+
+.pet-emoji {
+  font-size: 48px;
+}
+
+.pet-card:hover {
+  cursor: pointer;
+  border-color: #e8588a;
+}
+
+.details-box {
+  background-color: white;
+  border: 2px solid #f0dbe4;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.details-box h3 {
+  font-size: 15px;
+  margin: 18px 0 6px 0;
+}
+
+.breed {
+  color: #8a7480;
+  margin-top: 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #fbd5e3;
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 14px;
+  margin: 2px 4px 2px 0;
+}
+
+.tag-warn {
+  background-color: #ffe0e0;
+  color: #a01c1c;
+}
+
+.vaccine-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0dbe4;
+  font-size: 14px;
+}
+
+.empty {
+  color: #8a7480;
+  font-size: 14px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.section-head h3 {
+  margin: 0;
+}
+
+.section-head button {
+  background-color: white;
+  color: #e8588a;
+  border: 1px solid #e8588a;
+  border-radius: 10px;
+  padding: 4px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.section-head button:hover {
+  background-color: #e8588a;
+  color: white;
+}
+
+.reset-btn {
+  margin-top: 24px;
+  background: none;
+  border: none;
+  color: #8a7480;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}

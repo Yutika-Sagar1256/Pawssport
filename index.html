@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pawssport</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>🐾 Pawssport</h1>
+    <p>Your pet's health passport, by Pink Paws</p>
+
+    <div class="pet-row">
+      <div class="pet-card" onclick="showPet(0)">
+        <div class="pet-emoji">🐶</div>
+        <h2>Milo</h2>
+        <p>Dog</p>
+      </div>
+
+      <div class="pet-card" onclick="showPet(1)">
+        <div class="pet-emoji">🐱</div>
+        <h2>Luna</h2>
+        <p>Cat</p>
+      </div>
+    </div>
+
+    <div id="details"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
