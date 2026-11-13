@@ -8,22 +8,66 @@
     <h1>🐾 Pawssport</h1>
     <p>Your pet's health passport, by Pink Paws</p>
 
-    <div class="pet-row">
-      <div class="pet-card" onclick="showPet(0)">
-        <div class="pet-emoji">🐶</div>
-        <h2>Milo</h2>
-        <p>Dog</p>
+    <nav>
+      <button id="nav-pets" class="active" onclick="showPage('pets')">My Pets</button>
+      <button id="nav-grooming" onclick="showPage('grooming')">Grooming</button>
+      <button id="nav-bookings" onclick="showPage('bookings')">Bookings</button>
+    </nav>
+
+    <div id="page-pets" class="page">
+      <div class="pet-row">
+        <div class="pet-card" onclick="showPet(0)">
+          <div class="pet-emoji">🐶</div>
+          <h2>Milo</h2>
+          <p>Dog</p>
+        </div>
+
+        <div class="pet-card" onclick="showPet(1)">
+          <div class="pet-emoji">🐱</div>
+          <h2>Luna</h2>
+          <p>Cat</p>
+        </div>
       </div>
 
-      <div class="pet-card" onclick="showPet(1)">
-        <div class="pet-emoji">🐱</div>
-        <h2>Luna</h2>
-        <p>Cat</p>
+      <div id="details"></div>
+    </div>
+
+    <div id="page-grooming" class="page hidden">
+      <div class="form-box">
+        <h2>✂️ Book at Pink Paws</h2>
+
+        <label>Which pet?</label>
+        <select id="groom-pet"></select>
+
+        <label>Service</label>
+        <select id="groom-service">
+          <option>Bath &amp; Blow-dry - ₹800</option>
+          <option>Full Grooming - ₹1,500</option>
+          <option>Nail Trim &amp; Ear Clean - ₹400</option>
+          <option>Spa Package - ₹2,200</option>
+        </select>
+
+        <label>Date</label>
+        <input type="date" id="groom-date">
+
+        <label>Time</label>
+        <select id="groom-time">
+          <option>10:00 AM</option>
+          <option>12:00 PM</option>
+          <option>2:00 PM</option>
+          <option>4:00 PM</option>
+        </select>
+
+        <button class="primary-btn" onclick="bookGrooming()">Book appointment</button>
+        <div id="groom-error" class="error"></div>
       </div>
     </div>
 
-    <div id="details"></div>
+    <div id="page-bookings" class="page hidden">
+      <div id="bookings-list"></div>
+    </div>
 
     <script src="script.js"></script>
+    <script src="booking.js"></script>
   </body>
 </html>
