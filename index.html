@@ -11,6 +11,7 @@
     <nav>
       <button id="nav-pets" class="active" onclick="showPage('pets')">My Pets</button>
       <button id="nav-grooming" onclick="showPage('grooming')">Grooming</button>
+      <button id="nav-sitter" onclick="showPage('sitter')">Pet Sitter</button>
       <button id="nav-bookings" onclick="showPage('bookings')">Bookings</button>
     </nav>
 
@@ -60,6 +61,39 @@
 
         <button class="primary-btn" onclick="bookGrooming()">Book appointment</button>
         <div id="groom-error" class="error"></div>
+      </div>
+    </div>
+
+        <div id="page-sitter" class="page hidden">
+      <div class="form-box">
+        <h2>🏠 Book a pet sitter</h2>
+
+        <label>Which pet?</label>
+        <select id="sitter-pet"></select>
+
+        <label>Sitter</label>
+        <select id="sitter-name" onchange="updateCost()"></select>
+
+        <label>Date</label>
+        <input type="date" id="sitter-date">
+
+        <label>Start time</label>
+        <select id="sitter-time">
+          <option>8:00 AM</option>
+          <option>10:00 AM</option>
+          <option>12:00 PM</option>
+          <option>2:00 PM</option>
+          <option>4:00 PM</option>
+          <option>6:00 PM</option>
+        </select>
+
+        <label>Hours (minimum 3)</label>
+        <input type="number" id="sitter-hours" value="3" min="3" max="12" oninput="updateCost()">
+
+        <div id="sitter-cost" class="cost"></div>
+
+        <button class="primary-btn" onclick="bookSitter()">Book sitter</button>
+        <div id="sitter-error" class="error"></div>
       </div>
     </div>
 
